@@ -1,40 +1,40 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="hhh lpR fFf">
+    <q-header bordered class="site-header">
       <q-toolbar>
         <q-btn
-          flat
           dense
+          flat
           round
           icon="menu"
-          aria-label="Menu"
+          class="burger"
           @click="toggleLeftDrawer"
         />
-
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Essential Links </q-item-label>
-      </q-list>
+    <q-drawer
+      v-model="leftDrawerOpen"
+      side="left"
+      overlay
+      behavior="mobile"
+      bordered
+    >
+      <!-- drawer content -->
     </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer bordered class="site-footer"> </q-footer>
   </q-layout>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script>
+import { ref } from 'vue';
 
-export default defineComponent({
-  name: 'MainLayout',
-
+export default {
   setup() {
     const leftDrawerOpen = ref(false);
 
@@ -45,5 +45,18 @@ export default defineComponent({
       },
     };
   },
-});
+};
 </script>
+
+<style lang="scss">
+.burger {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid $accent;
+}
+</style>
