@@ -6,7 +6,26 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/Index.vue') }],
   },
-
+	{
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/About.vue') }],
+  },
+	{
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '/cart', component: () => import('pages/Cart.vue') }],
+  },
+	{
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '/checkout', component: () => import('pages/Checkout.vue') }],
+  },
+	{
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '/checkout', component: () => import('pages/Privacy.vue') }],
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
