@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
 	{
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/About.vue') }],
+    children: [{ path: '/about', component: () => import('pages/About.vue') }],
   },
 	{
     path: '/',
@@ -24,7 +24,7 @@ const routes: RouteRecordRaw[] = [
 	{
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '/checkout', component: () => import('pages/Privacy.vue') }],
+    children: [{ path: '/privacy', component: () => import('pages/Privacy.vue') }],
   },
   // Always leave this as last one,
   // but you can also remove it

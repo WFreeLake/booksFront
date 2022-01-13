@@ -1,5 +1,5 @@
 <template>
-  <q-page class="checkout-page">About</q-page>
+  <q-page class="row items-center justify-evenly">Checkout page</q-page>
 </template>
 
 <script lang="ts">
