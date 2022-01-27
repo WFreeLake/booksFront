@@ -54,7 +54,7 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
 
       // transpile: false,
       // publicPath: '/',
@@ -146,9 +146,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `book-store`,
-        short_name: `book-store`,
-        description: `Online store of books`,
+        name: 'book-store',
+        short_name: 'book-store',
+        description: 'Online store of books',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
