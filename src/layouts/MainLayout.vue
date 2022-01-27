@@ -1,25 +1,24 @@
 <template>
   <q-layout view="hhh lpR fFf">
-    <q-header bordered class="site-header">
-      <q-toolbar>
-        <q-btn
-          dense
-          flat
-          round
-          icon="menu"
-          class="burger"
-          @click="toggleLeftDrawer"
-        />
-      </q-toolbar>
+    <q-header class="site-header">
+      <div class="container">
+        <div class="row justify-between items-center">
+          <div class="flex items-center">
+            <burger @click="toggleLeftDrawer" />
+            <router-link to="/">
+              <img
+                src="~/assets/images/logo.webp"
+                alt="Book Store"
+                class="logo"
+              />
+            </router-link>
+          </div>
+          <navigation />
+        </div>
+      </div>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      side="left"
-      overlay
-      behavior="mobile"
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" elevated>
       <!-- drawer content -->
     </q-drawer>
 
@@ -33,8 +32,14 @@
 
 <script lang="ts">
 import { ref } from 'vue';
+import Navigation from 'components/Navigation.vue';
+import Burger from 'components/UI/Burger.vue';
 
 export default {
+  components: {
+    Navigation,
+    Burger,
+  },
   setup() {
     const leftDrawerOpen = ref(false);
 
@@ -56,7 +61,12 @@ export default {
   }
 }
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid $accent;
+  background: transparent;
+  padding: 1rem 0;
+  .logo {
+    @media (max-width: 767px) {
+      width: 72px;
+    }
+  }
 }
 </style>
