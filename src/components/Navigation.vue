@@ -19,7 +19,7 @@
           <q-btn
             round
             padding="6px"
-            :ripple="{ color: 'primary', center: true }"
+            :ripple="{ color: 'accent', center: true }"
             :flat="$route.path != icon.path"
             :outline="$route.path == icon.path"
             color="accent"
