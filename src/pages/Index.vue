@@ -6,6 +6,7 @@
         :slides-per-view="1"
         :pagination="pagination"
         :direction="'vertical'"
+        mousewheel
       >
         <swiper-slide>Slide 1</swiper-slide>
         <swiper-slide>Slide 2</swiper-slide>
@@ -27,10 +28,10 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper.min.css'; // core styles
 import 'swiper/components/pagination/pagination.min.css'; //dots styles
 
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, { Mousewheel, Pagination } from 'swiper';
 
 // install swiper core and required modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Mousewheel, Pagination]);
 
 export default defineComponent({
   name: 'PageIndex',
