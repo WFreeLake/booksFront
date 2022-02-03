@@ -93,6 +93,8 @@ export default defineComponent({
     font-size: 0.9rem;
     transition: 0.2s;
     position: relative;
+    border-radius: 50px;
+    padding: 4px 2px 1px 5px;
     &::before,
     &::after {
       position: absolute;
@@ -131,6 +133,9 @@ export default defineComponent({
       &::after {
         display: none;
       }
+    }
+    &:hover {
+      background: rgba($color: $dark, $alpha: 0.06);
     }
   }
 }

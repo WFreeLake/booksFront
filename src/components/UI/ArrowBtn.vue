@@ -3,8 +3,8 @@
     <span class="arrow-btn__text">Start shopping</span>
     <q-icon
       class="arrow-btn__icon"
-      size="2rem"
-      name="mdi-chevron-right"
+      size="1.7rem"
+      name="las la-angle-right"
     ></q-icon>
   </button>
 </template>
