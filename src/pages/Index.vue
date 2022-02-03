@@ -8,7 +8,9 @@
         :direction="'vertical'"
         mousewheel
       >
-        <swiper-slide>Slide 1</swiper-slide>
+        <swiper-slide>
+          <StoreIntro />
+        </swiper-slide>
         <swiper-slide>Slide 2</swiper-slide>
         <swiper-slide>Slide 3</swiper-slide>
         <swiper-slide>Slide 4</swiper-slide>
@@ -20,6 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import StoreIntro from 'components/homePageSildes/Slide1.vue';
 
 // import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -38,6 +41,7 @@ export default defineComponent({
   components: {
     Swiper,
     SwiperSlide,
+    StoreIntro,
   },
   setup() {
     return {

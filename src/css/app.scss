@@ -1,7 +1,14 @@
+// fonts
+@font-face {
+  font-family: 'PTSerif';
+  src: url('../assets/fonts/PTSerif-Regular.woff2') format('woff2');
+}
+
 // app global css in SCSS form
 body {
   background: $secondary;
   font-size: 16px;
+  color: $dark;
 }
 
 .container {
