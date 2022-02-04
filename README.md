@@ -12,6 +12,11 @@ yarn
 quasar dev
 ```
 
+### For start the app in ssr mode 
+```bash
+quasar dev -m ssr
+```
+
 ### Lint the files
 ```bash
 yarn run lint
