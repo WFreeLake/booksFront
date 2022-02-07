@@ -39,15 +39,6 @@ import SlideContact from 'components/homePageSildes/SlideContact.vue';
 // import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
-// import Swiper styles
-import 'swiper/swiper.min.css'; // core styles
-import 'swiper/components/pagination/pagination.min.css'; //dots styles
-
-import SwiperCore, { Mousewheel, Pagination } from 'swiper';
-
-// install swiper core and required modules
-SwiperCore.use([Mousewheel, Pagination]);
-
 export default defineComponent({
   name: 'PageIndex',
   components: {

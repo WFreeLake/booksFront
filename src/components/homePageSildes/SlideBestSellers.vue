@@ -1,7 +1,7 @@
 <template>
   <section class="best-sellers">
     <h2 class="slide-title">Best seller books</h2>
-    <div class="sellers-content">
+    <div class="slide-content">
       <q-tabs
         v-model="category"
         vertical
@@ -16,7 +16,20 @@
           :label="cat.label"
         />
       </q-tabs>
-      <div class="slider"></div>
+      <swiper class="sellers-swiper" freeMode="true" slides-per-view="3">
+        <swiper-slide> Book 1 </swiper-slide>
+        <swiper-slide> Book 2 </swiper-slide>
+        <swiper-slide> Book 3 </swiper-slide>
+        <swiper-slide> Book 4 </swiper-slide>
+        <swiper-slide> Book 5 </swiper-slide>
+        <swiper-slide> Book 6 </swiper-slide>
+        <swiper-slide> Book 1 </swiper-slide>
+        <swiper-slide> Book 2 </swiper-slide>
+        <swiper-slide> Book 3 </swiper-slide>
+        <swiper-slide> Book 4 </swiper-slide>
+        <swiper-slide> Book 5 </swiper-slide>
+        <swiper-slide> Book 6 </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
@@ -24,8 +37,14 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
 export default defineComponent({
   name: 'SlideBestSellers',
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   setup() {
     return {
       category: ref('fantasy'),
@@ -51,6 +70,11 @@ export default defineComponent({
           label: 'Travel books ',
         },
       ],
+      pagination: {
+        clickable: true,
+        bulletClass: 'swiper-dot',
+        bulletActiveClass: 'swiper-dot_active',
+      },
     };
   },
 });
@@ -59,17 +83,19 @@ export default defineComponent({
 <style lang="scss">
 .best-sellers {
   height: 100%;
-}
-.sellers-content {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .slide-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .cat-tabs {
   height: auto;
-  width: 14%;
+  flex: 0 0 14%;
   text-align: left;
+}
+.sellers-swiper {
+  flex: 0 0 68%;
+  height: 100%;
 }
 </style>
