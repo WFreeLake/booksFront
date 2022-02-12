@@ -18,7 +18,7 @@
         <router-link :to="icon.path">
           <q-btn
             round
-            padding="6px"
+            padding="0.35rem"
             :ripple="{ color: 'accent', center: true }"
             :flat="$route.path != icon.path"
             :outline="$route.path == icon.path"

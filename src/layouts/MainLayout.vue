@@ -65,7 +65,7 @@ export default {
   padding: 1rem 0;
   .logo {
     @media (max-width: 767px) {
-      width: 72px;
+      width: 4rem;
     }
   }
 }

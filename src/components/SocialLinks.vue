@@ -43,7 +43,7 @@ export default defineComponent({
   align-items: center;
 }
 .social-link {
-  margin: 0 14px;
+  margin: 0 1rem;
   &:first-child {
     margin-left: 0;
   }

@@ -59,17 +59,19 @@ export default defineComponent({
   &__text {
     font-size: 1.1rem;
   }
-  .arrow-btn {
-    margin-bottom: 8rem;
-  }
 }
 
 .left-side {
   flex: 0 0 38%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
+  padding: 2.5rem 0;
+
+  .social-link {
+    margin-top: 80%;
+  }
 }
 
 .right-side {

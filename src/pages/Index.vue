@@ -86,14 +86,14 @@ export default defineComponent({
   }
 
   .swiper-dot {
-    margin: 4px 0;
+    margin: 0.16rem 0;
     cursor: pointer;
     font-weight: 500;
     letter-spacing: 1.5px;
     font-size: 0.9rem;
     transition: 0.2s;
     position: relative;
-    border-radius: 50px;
+    border-radius: 3rem;
     padding: 4px 2px 1px 5px;
     &::before,
     &::after {
@@ -116,7 +116,7 @@ export default defineComponent({
       transform-origin: top;
     }
     &_active {
-      margin: 70px 0;
+      margin: 4.3rem 0;
       &::before,
       &::after {
         transform: translateX(-50%) scaleY(1);
