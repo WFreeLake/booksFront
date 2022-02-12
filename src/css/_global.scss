@@ -1,0 +1,9 @@
+.slide-title {
+  font-family: $pt;
+  font-size: 3rem;
+  text-align: center;
+  color: $dark;
+}
+.slide-content {
+  height: calc(100% - 60px);
+}

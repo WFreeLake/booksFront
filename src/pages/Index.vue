@@ -11,10 +11,18 @@
         <swiper-slide>
           <StoreIntro />
         </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>
+          <SlideBestSellers />
+        </swiper-slide>
+        <swiper-slide>
+          <SlideFavorites />
+        </swiper-slide>
+        <swiper-slide>
+          <SlideTestimonials />
+        </swiper-slide>
+        <swiper-slide>
+          <SlideContact />
+        </swiper-slide>
       </swiper>
     </div>
   </q-page>
@@ -23,18 +31,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import StoreIntro from 'components/homePageSildes/Slide1.vue';
+import SlideBestSellers from 'components/homePageSildes/SlideBestSellers.vue';
+import SlideFavorites from 'components/homePageSildes/SlideFavorites.vue';
+import SlideTestimonials from 'components/homePageSildes/SlideTestimonials.vue';
+import SlideContact from 'components/homePageSildes/SlideContact.vue';
 
 // import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// import Swiper styles
-import 'swiper/swiper.min.css'; // core styles
-import 'swiper/components/pagination/pagination.min.css'; //dots styles
-
-import SwiperCore, { Mousewheel, Pagination } from 'swiper';
-
-// install swiper core and required modules
-SwiperCore.use([Mousewheel, Pagination]);
 
 export default defineComponent({
   name: 'PageIndex',
@@ -42,6 +45,10 @@ export default defineComponent({
     Swiper,
     SwiperSlide,
     StoreIntro,
+    SlideBestSellers,
+    SlideFavorites,
+    SlideTestimonials,
+    SlideContact,
   },
   setup() {
     return {
