@@ -1,36 +1,26 @@
 <template>
   <section class="best-sellers">
     <h2 class="slide-title">Best seller books</h2>
-    <div class="slide-content">
-      <q-tabs
-        v-model="category"
-        vertical
-        switch-indicator
-        indicator-color="accent"
-        class="cat-tabs"
-      >
-        <q-tab
-          v-for="cat in cats"
-          :key="cat.name"
-          :name="cat.name"
-          :label="cat.label"
-        />
-      </q-tabs>
-      <swiper class="sellers-swiper" freeMode="true" slides-per-view="3">
-        <swiper-slide> Book 1 </swiper-slide>
-        <swiper-slide> Book 2 </swiper-slide>
-        <swiper-slide> Book 3 </swiper-slide>
-        <swiper-slide> Book 4 </swiper-slide>
-        <swiper-slide> Book 5 </swiper-slide>
-        <swiper-slide> Book 6 </swiper-slide>
-        <swiper-slide> Book 1 </swiper-slide>
-        <swiper-slide> Book 2 </swiper-slide>
-        <swiper-slide> Book 3 </swiper-slide>
-        <swiper-slide> Book 4 </swiper-slide>
-        <swiper-slide> Book 5 </swiper-slide>
-        <swiper-slide> Book 6 </swiper-slide>
-      </swiper>
-    </div>
+    <swiper class="sellers-swiper" :freeMode="true" slides-per-view="3">
+      <swiper-slide class="book-slide">
+        <div class="book-card">Book</div>
+      </swiper-slide>
+      <swiper-slide class="book-slide">
+        <div class="book-card">Book</div>
+      </swiper-slide>
+      <swiper-slide class="book-slide">
+        <div class="book-card">Book</div>
+      </swiper-slide>
+      <swiper-slide class="book-slide">
+        <div class="book-card">Book</div>
+      </swiper-slide>
+      <swiper-slide class="book-slide">
+        <div class="book-card">Book</div>
+      </swiper-slide>
+      <swiper-slide class="book-slide">
+        <div class="book-card">Book</div>
+      </swiper-slide>
+    </swiper>
   </section>
 </template>
 
@@ -83,19 +73,20 @@ export default defineComponent({
 <style lang="scss">
 .best-sellers {
   height: 100%;
-  .slide-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.cat-tabs {
-  height: auto;
-  flex: 0 0 14%;
-  text-align: left;
 }
 .sellers-swiper {
-  flex: 0 0 68%;
+  width: 100%;
   height: 100%;
+}
+.book-slide {
+  width: 100%;
+}
+.book-card {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
